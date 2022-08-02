@@ -1,0 +1,11 @@
+//   const onSubmit = (e) => {
+//     axios
+//       .post("http://localhost:8000/api/short", data)
+//       .then(function (response) {
+//         // alert("submitted");
+//         // setData("");
+//       });
+
+//     console.log(data);
+//     e.preventDefault();
+//   };
