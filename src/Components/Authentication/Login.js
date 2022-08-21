@@ -8,9 +8,10 @@ function Login() {
 
   const onSubmit = async (data) => {
     await axios
-      .post("http://127.0.0.1:8000/api/register", data)
+      .post("http://127.0.0.1:8000/api/login", data)
       .then(function (response) {
-        alert("registered");
+        alert("logged in");
+        localStorage.setItem(response.data.authtoken);
         console.log(response.data);
         history.push("/");
         window.location.reload();
@@ -28,7 +29,7 @@ function Login() {
                 type="text"
                 className="input-group-text form-control"
                 placeholder="email"
-                {...register("password")}
+                {...register("email")}
               />{" "}
               <input
                 type="text"

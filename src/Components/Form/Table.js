@@ -14,7 +14,7 @@ function Table({ getlinks }) {
         </thead>
         {getlinks.map((data) => {
           return (
-            <tbody>
+            <tbody key={data.id}>
               <tr>
                 <td>{data.id}</td>
                 <td>
